@@ -1,0 +1,397 @@
+1.a=5
+b=3
+c=$a+$b          
+d=$a-$b
+e=$a*$b                        
+f=$a/$b                
+echo c=$(($c))
+echo d=$(($d))
+echo e=$(($e))
+echo f=$(($f))
+
+2.n=20
+echo a=$((n += 30))
+echo b=$((n -= 30))
+echo c=$((n *= 30))
+echo d=$((n /= 30))
+echo e=$((n %= 30))
+
+3.++ (pre) increment operator
+i=39
+echo "pre increment :" $((++i+10))
+
+4.++(post) increment operator
+i=39
+echo "This is post increment :" $((i++))
+echo i=$(($i))
+
+5.-- (pre) decrement
+i=39
+echo "this is pre decrement :" $((--i))
+
+6.--(post) decrement
+i=39
+echo "This is post decrement:" $((i--))
+echo "Decrement after post eoperator: "$(($i))
+
+7.d="English"
+e="French"
+if [[$1 = "English" && $2 ="French"]]
+then 
+    echo "I know English"
+else
+    echo "I know French"
+fi
+
+8.terminate=$1
+if [[ !$terminate ]]
+then
+    echo "Program is running"
+else
+    echo "Program is terminated"
+fi
+
+9.terminate=$1
+if [[ !$terminate == 1 ]]
+then
+    echo "Program is fun"
+else
+    echo "Else block executes"
+fi
+
+10.n=50
+if [ $n -eq 80 ]
+then  
+    echo "the number is equal to 80"
+else
+    echo "the number is not equal to 80"
+fi
+
+11.n=50
+if [ $n -eq 50 ]
+then  
+    echo "the number is equal to 50"
+else
+    echo "the number is not equal to 50"
+fi
+
+12.h=120
+if [ $h -eq 123 ]
+then
+    echo "The number is equal to 120"
+else
+    echo "The number is equal to 120 but not 123"
+fi
+
+13.h=50
+if [ $h -ne 50 ]
+then
+    echo "The number is equal to 100"
+else
+    echo "The number is not equal to 100"
+fi
+
+14.n=40
+if [ $n -ge 50 ]
+then
+    echo "Number is greater then 50"
+else
+    echo "Number is lesser then 50"
+fi
+
+15.n=30
+if [ $n -lt 40 ]
+then 
+    echo $n : " Is lesser then 40 "
+else 
+    echo "Number is not lesser then 40"
+fi
+
+16.n=50
+if [ $n -le 50 ]
+then
+   echo $n : "Is lesser then or equal to 50"
+else 
+    echo "Number is greater"
+fi
+
+17.n=30
+if [ $n -lt 40 ]
+then 
+    echo $n : " Is lesser then 40 "
+else 
+    echo "Number is not lesser then 40"
+fi
+
+18.n=50
+if [ $n -le 50 ]
+then
+   echo $n : "Is lesser then or equal to 50"
+else 
+    echo "Number is greater"
+fi
+
+19.n=50 
+if [[ $n < 50 ]]
+then
+    echo $n:"Is lesser then 50"
+else
+    echo $n:"Is equals to"
+fi
+
+20.n=55
+if (( $n <= 50 ))
+then 
+    echo $n:"Is lesser then 55"
+else
+    echo "Else part"
+fi
+
+21.n=100
+if (( $n > 80))
+then 
+   echo "Condition works"
+else
+   echo "This is False, else block executes"
+fi
+
+22.n=20
+if (( $n >= 10 ))
+then 
+    echo $n : "Is greater then 10"
+else
+    echo $n : "Is lesser then 10"
+fi
+
+23.str="Strawberry"
+if [ $str="Strawberry" ]
+then
+    echo $str:"The values are compared and its true"
+else
+    echo " values are not compared here"
+fi
+
+24.str="mango"
+if [ $str = "orange" ]
+then
+   echo " The value are equal"
+else
+    echo " the value are not equal"
+fi
+
+25.var=100
+if [ $var == 100 ]
+then
+    echo $var: " the value is equals to 100"
+else
+    echo "the values as not equals to 100"
+fi
+
+26.val=100
+if [ $var != 50 ]
+then
+    echo $val : "Is not equals to 50"
+else 
+    echo "Is equals to 50"
+fi
+
+27.string="Mango"
+_string="Orange"
+if [ $string < $_string ]
+then
+    echo "String values are equal to each other"
+else
+    echo "string values are not equal to each other"
+fi
+
+28.string="Apple"
+str="cobra"
+if [ $string > $str ]
+then
+    echo "string, is greater than str"
+else
+    echo "str is greater than string"
+fi
+
+29.variable=""
+if [ -z $variable ]
+then
+   echo "string length is zero"
+else
+   echo "string has active length"
+fi
+
+30.variable="SACHIN"
+if [ -n $variable ]
+then
+    echo "String length is 6"
+else
+    echo "String length is zero"
+fi
+
+31.number=25
+another=10
+if [ $number -gt 32 -a $another -lt 15 ]
+then
+    echo "Logic Works"
+elif [ $number -gt 13 -a $another -lt 18 ]
+then
+    echo "Else If Block Execution"
+else
+    echo "Logic invalid"
+fi
+
+32.a=0
+while [ $a -lt 10 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+
+33.a=1                   
+while [ $a -le 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+
+34.a=0
+while [ $a -lt 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+
+35.for i in 1 2 3 4 5 6 7 8 9
+do
+    sum=`expr $sum + $i`
+done
+    echo $sum
+
+36.a=1
+until [ $a -ge 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+
+37.a=0
+while [ "$a" -lt 10 ]
+do
+    b="$a"
+    while [ "$b" -ge 0 ]
+    do
+        echo -n "$b"
+        b=`expr $b - 1`
+    done
+    echo
+    a=`expr $a + 1`
+done
+
+38.nums="1 2 3 4 5 6 7 8"
+for i in $nums
+do
+    result=`expr $i%2`
+    if[ $result -eq 0 ]
+    then
+        echo "Even Number"
+    else
+        echo "Odd number"
+    fi
+done
+
+39.a=0
+while [ $a -lt 10 ]
+do
+    echo $a
+    if [ $a -eq 5 ]
+    then 
+        break
+    fi
+    a=`expr $a + 1`
+done
+
+40.for var1 in 1 2 3
+do
+    for var2 in 0 5
+    do
+        if [ $var1 -eq 2 -a $var2 -eq 0 ]
+        then
+            break 2
+        else
+            echo "$var1 $var2"
+        fi
+    done
+done
+
+41.nums="1 2 3 4 5 6 7"
+for numbers in $nums
+do
+    Q=`expr $numbers % 2`
+    if [ $Q -eq 0 ]
+    then
+        echo "Is an even number"
+        continue
+    fi
+    echo "Is odd number"
+done
+
+42.i=0
+while [[ $i -lt 5 ]]
+do
+    echo "Number : $i"
+    #((i++))
+    if[[ $i  -eq 2 ]]
+    then
+        continue
+    fi
+    echo "number : $i"
+done
+echo "All done well"
+
+43.hello(){
+    echo "Linux Scripting"
+    echo "Programming is fun"
+    echo "Hello Developers"
+}
+
+44.race(){
+    echo "what is your name? : $1"
+    echo "where are you from? : $2"
+    echo "How are you? : $3"
+}
+race sachin bangalore im_fine
+
+45.play(){
+    echo "what is your name? : $1"
+    return 10
+}
+play SACHIN
+ret=$? 
+echo "The return value is $ret"
+
+46.jelly(){
+    echo "I love Cricket : $1"
+    return 2+2
+}
+jelly because_of_its_popularity
+ret=$?
+echo $ret
+
+47.number_one(){
+    echo " This is first function speaking......"
+    number_two
+}   
+number_two(){
+    echo "This second function speaking...."
+}
+number_one
+
+48.first_func(){
+    echo "Alpha online....... Over"
+    second_func
+}
+second_func(){
+    echo "eta online...... over"
+}
+first_func
