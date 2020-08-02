@@ -1,0 +1,90 @@
+1)NPM packages?
+NPM=node package manager
+NPM is For Node.js packages, or modules.
+The NPM program is installed on computer when you install Node.js.
+
+Lists of all the packages in NPM:
+React,Pro-typed,moments,Express,Request,Lodash,Async,Chalk,Commander,Debug.
+colors,jquery,minimist,@types/node,@babel/runtime,aws-sdk,js-yaml,ora,@angular/core.
+
+2)How to convert buffer to JSON?
+JSON is short for Javascript object Notation,and is a way to store information in an organized,easy-to-access manner.
+Ex:let bufferOne = Buffer.from('this is buffer.');
+console.log(bufferOne);
+let json = JSON.stringify(bufferOne);
+console.log(json);
+
+3)Node Js Buffers?
+1.Node Js provides buffer class to store raw data similar to an array of integer.
+2.Buffer class is used because pure javascript is not nice to binary data.
+3.Buffer class is global class.
+4.It can be accessed in application without using the buffer module.
+
+Creating a buffer
+A buffer can be created or constucted in many ways,but there are three mostly used method to create a buffer.
+creating a buffer uninitiated.
+ex:var buf=new Buffer(3);
+creating a buffer from an array.
+ex:buf=new Buffer([3,6,9]);
+creating a buffer from string.
+ex:buf=new Buffer("hello good morning");
+
+Writing a buffer
+The method of writing into a node buffer is 
+syntax:buf.write(string[, offset][, length][,encoding])
+Ex:buf = new Buffer(256);len = buf.write(" hello well done");
+console.log("length:"+ len);
+
+Reading a buffer
+The method to read data into buffer is
+syntax:buf.toString([encoding][, start][, end])
+Ex:buf =new Buffer(26);
+for(var i=0;i<26;i++) {
+buf[i] = i + 97;
+}
+console.log(buf.toString('ascii'));
+console.log(buf.tostring('ascii',0,5));
+console.log(buf.toString('utf8',0,5));
+console.log(buf.tostring(undefined,0,5));
+
+4)working on all possible filesystem in node js
+Reading a file in node js
+var fs = require('fs')
+fs.readfile('app.js','utf8',function(err,data){
+console.log(data);
+});
+
+writing data into a file in node js
+fs.writefile('log.js','console.log("helloworld")',function(err){
+console.log("file created");
+});
+
+deleting data from a file in node js
+fs.unlink('log.js',function(err){
+console.log("file delected");
+});
+
+Rename the file 
+fs.rename('file.txt','node.txt',function(err){
+if (err) throw err;
+console.log('file Renamed');
+});
+
+append a file in node js
+fs.appendFile('file.txt','content', function(err) {
+if (err) throw err;
+console.log('saved');
+});
+
+create an empty file in node js
+fs.open('udaya.txt', 'w',function (err, file) {
+if (err) throw err;
+console.log('saved');
+});
+
+synchronous methods of file system in nodejs
+var fs=require('fs');
+let data="This is a node js program";
+fs.writeFilesync("file.txt",data);
+console.log("File has been created successfully");
+console.log(fs.readFileSync('file.txt','utf8')); 
