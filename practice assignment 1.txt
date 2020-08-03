@@ -1,0 +1,57 @@
+1.what you have learn on code concept
+I learned about basic programming,definitions,syntax.
+
+2.what you have learn standard code?
+If defines set of technical definitions and guidelines.It gives all the necessary requirements for the product,services and opertions.
+
+3.Explain about static variables and Instance variables?
+Static variable is common for all the instances of the class since it is a class level variable.
+Instance method is nothing but which access static variables directly and also called as objects.
+
+4.Difference between sonarqube and sonarlint?
+Sonarlint gives feedback for the code you entered.It is available in IDE(Intellij,Eclipse and Visualv Studio).
+sonarqude is a central server. It analyses all the source lines of your project on a regular basis.
+
+5.use continue and return in if else conditions and switch case considering two variables?
+Public class Ifswitch
+{
+int i=30;
+int j=4;
+public void Ifcondition()
+{
+if(i<j){
+   system.out.println(j+ " is greater than " +i);}
+   else {
+   system.out.println(i+ " is greater than " +j);
+   }
+}
+public void switchdemo() {
+  switch(i)
+{
+case 1:if(i<10) {
+system.out.println("i is less than 10");}
+break;
+case 2:if(i>10) {
+system.out.println("i is greater than 10");}
+break;
+default:
+system.out.println("i is something");
+    }
+}
+public void loopdemo() {
+  while(j<=i) {
+   system.out.println(j);
+j=j+2;
+while(j>25) {
+    continue;
+    }
+   }
+}
+
+public static void main(String[] args) {
+  Ifswitch obj=new Ifswitch();
+obj.switchdemo();
+obj.Ifcondition();
+obj.loopdemo();
+  }
+}
